@@ -1,17 +1,23 @@
-#I would like to enrich the mediawiki XML file I am pasting in, by you performing NER on the data.
-#Please identify and markup:
+#I am pasting text below and want you to perform NER on the text
+#The text is in MediaWiki XML format
+#I wish you to preserve the existing XML format and add appropriate tages using the convention for tags
+
+#<person></Person>
+
+Please identify the following entities
+
 #Person
 #Place
 #Occupation
 #Ship
+#Weather
 #Time
 #Date
+#Quantity
 #Commodity
-#Document
-#Perform the markup in a modification of the existing XML, while preserving the exsiting XML structure
+Document
+
 #AURELIUS RESPONSE
-#To enrich the provided MediaWiki XML file with Named Entity Recognition (NER) tags for the specified categories, I will modify the existing XML structure to include markup for persons, places, times, dates, occupations, and material objects or trade goods.
-#Here is the original XML snippet you provided, enhanced with the appropriate NER tags:
 <page>
     <title>Test Title</title>
     <ns>0</ns>
@@ -2698,7 +2704,7 @@ PROB 11/447/120 Will of <person>Thomas Langford</person>, Mariner of <place>Step
 |Suggested links=]
 }}</text>
       <sha1>5cn54ln464gyvdllwyv8y18t4hk2ps5</sha1>
-    </revision>
+</revision>
   </page>
   <page>
     <title>HCA 13/71 f.114r Annotate</title>
@@ -2728,48 +2734,46 @@ PROB 11/447/120 Will of <person>Thomas Langford</person>, Mariner of <place>Step
 {{PageHelp}}
 {{PageTranscription
 |Transcription image={{#transcription-image: P1080984.JPG}}
-|Transcription=The eighth day of <date>March 1655</date>
+|Transcription=The eighth day of <Time>March 1655</Time>
 
-The Claime of <person>Maturine Pellicot</person>&amp;#125;
-and company of <place>Amsterdam</place> Owners&amp;#125;
-of the shipp the <ship>ffortune</ship> (whereof&amp;#125;
-<person>Daniel Egerton</person> is Master for the&amp;#125;
-sayd shipp and her tackle apparell&amp;#125;
+The Claime of <Person>Maturine Pellicot</Person>&amp;#125;
+and company of <Place>Amsterdam</Place> Owners&amp;#125;
+of the <Ship>shipp</Ship> the <Ship>''ffortune''</Ship> (whereof&amp;#125;
+<Person>Daniel Egerton</Person> is <Occupation>Master</Occupation> for the&amp;#125;
+sayd <Ship>shipp</Ship> and her tackle apparell&amp;#125;
 and furniture taken and seized&amp;#125;
-by the <ship>dartmouth frigot</ship> in the immed=&amp;#125;
-late serice of the Commonwealth&amp;#125;
-of <place>England</place> and Budd ffrancklyn&amp;#125;
+by the <Ship>''dartmouth frigot''</Ship> in the immed=&amp;#125;
+late serice of the <Place>Commonwealth of England</Place> and <Person>Budd ffrancklyn</Person>&amp;#125;
 
 Examined upon an allegation the behalfe of the sayd
 Claymers
 
-'''<person>Daniel Egerton</person>''' of <place>Amsterdam</place> Mariner master of the
-sayd shipp the <ship>ffortune</ship> aged forty two yeares or there
+'''<Person>Daniel Egerton</Person>''' of <Place>Amsterdam</Place> <Occupation>Mariner master</Occupation> of the
+sayd <Ship>shipp</Ship> the <Ship>''fortune''</Ship> aged forty two yeares or there
 abouts a witnes produced sworne and examined saith
 as followeth videlicet.
 
 To the first Article of the sayd allegation this deponent saith that the arlate
-shipp the <ship>ffortune</ship> having in her a lading of <material>wines</material> was seized and
-taken by the <ship>dartmouth frigott</ship> being one of the frigotts in the immediate
-service of the Commonwealth of <place>England</place> upon the <date>thirtyeth day of January
-last past 1656</date>. new style. which he knoweth being master of the sayd shipp
+<Ship>shipp</Ship> the <Ship>''ffortune''</Ship> having in her a lading of <Commodity>wines</Commodity> was seized and
+taken by the <Ship>''dartmouth frigott''</Ship> being one of the frigotts in the immediate
+service of the <Place>Commonwealth of England</Place> upon the <Date>thirtyeth day of January last past 1656</Date>. new style. which he knoweth being <Occupation>master</Occupation> of the sayd <Ship>shipp</Ship>
 and on board her when she was so seized. And otherwise he cannot depose
 
 To the second article of the sayd allegation, this deponent saith that this deponent and
-Company did not at the tyme of the sayd seizure or before oppose the sayd <ship>dartmouth
-frigot</ship>, nor did the shipp <ship>ffortune</ship> att all fly from, or this deponent and
-Company use any Endeavours to fly from the sayd <ship>dartmouth frigot</ship>, but did
-willingly upon the first summons submitt the sayd shipp and her lading to be
+Company did not at the tyme of the sayd seizure or before oppose the sayd <Ship>''dartmouth frigot''</Ship>,
+nor did the <Ship>shipp</Ship> <Ship>''ffortune''</Ship> att all fly from, or this deponent and
+Company use any Endeavours to fly from the sayd <Ship>''dartmouth frigot''</Ship>, but did
+willingly upon the first summons submitt the sayd <Ship>shipp</Ship> and her lading to be
 visited and seized by the Company of the said frigot, severall of whom
-soone after the sayd summons came on board the <ship>fortune</ship> and seized her and
+soone after the sayd summons came on board the <Ship>''fortune''</Ship> and seized her and
 her lading and afterwards brought &amp;#91;XX&amp;#93; same into the downes, all which was
 done without any opposition made by this deponent or any of his Company. which
-he knoweth being master of the sayd shipp and an eye witnesse of the premisses
+he knoweth being <Occupation>master</Occupation> of the sayd <Ship>shipp</Ship> and an eye witnesse of the premisses
 And otherwise he cannot depose
 
 To the third article of the sayd allegation he saith that being summoned by a shott from the
 sayd frigot he this deponent immediately struck and lowered his maintop saile,
-so as the Captaine and Company of the sayd frigot did or well might see the
+so as the <Occupation>Captaine</Occupation> and Company of the sayd frigot did or well might see the
 same. And soone after this deponent did alsoe strike and lower his
 foresayle, and kept the same so strucken and lowered. And otherwise or
 further cannot depose, saving that he beleiveth he did what was his duty
@@ -2781,12 +2785,1526 @@ To the last he saith his foresayd deposition is true.
 
 To the Crosse Interrogatorie. &amp;#91;CENTRE HEADING&amp;#93;
 
-To the first Interrogatory, this Rendent saith that he sayled with his shipp <ship>ffortune</ship>
-off from the ffrench Coast directly to the Duynes, and that the sayd frigott
-mett the sayd shipp having sayled along the Beach, so as the sayd frigott
-did not chase the <ship>fortune</ship> or the <ship>ffortune</ship> fly from the frigott att all. And when this
+To the first Interrogatory, this Rendent saith that he sayled with his <Ship>shipp</Ship> <Ship>''fortune''</Ship>
+off from the <Place>ffrench Coast</Place> directly to the <Place>Duynes</Place>, and that the sayd frigott
+mett the sayd <Ship>shipp</Ship> having sayled along the Beach, so as the sayd frigott
+did not chase the <Ship>''fortune''</Ship> or the <Ship>ffortune</Ship> fly from the frigott att all. And when this
 Rendent first sawe the sayd frigot she was off of the beach not farr from the shoare; And
-when the <ship>ffortune</ship> was boarded she was about a dutch mile or two English
+when the <Ship>''ffortune''</Ship> was boarded she was about a dutch mile or two <Place>English</Place>
 miles from shoare. And further or otherwise he cannot answere.
 
+To the second Interrogatorie he saith, that being come neere to the sayd frigott, her <Occupation>Captaine</Occupation>
+and Company summoned this deponent by a shott, and immediately this deponent
+struck his mayne topsayle as aforesaid, but the said <Occupation>Captaine</Occupation> as it seemes, was
+not content therewith and therefore shott agayne, and then immediately this
+Rendent struck his foresayle, And att that tyme the <Ship>shipp</Ship> <Ship>''ffortune''</Ship> was
+come within about muskett shott of the sayd frigott. And otherwise
+he saith he cannot answere, saving that the sayd <Ship>''dartmouth frigott''</Ship> from
+the tyme this Rendent first saw her had out and did weare the <Place>English Colours</Place>
 
+Danielle Egerton &amp;#91;SIGNATURE RH SIDE&amp;#93;
+}}</text>
+      <sha1>56hsj1mgcrpe7263ioy0lqw62jmj5vo</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>HCA 13/71 f.114v Annotate</title>
+    <ns>0</ns>
+    <id>6090</id>
+    <revision>
+      <id>86180</id>
+      <parentid>39933</parentid>
+      <timestamp>2015-05-21T18:12:16Z</timestamp>
+      <contributor>
+        <username>ColinGreenstreet</username>
+        <id>2</id>
+      </contributor>
+      <minor/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="4813">{{PageMetaData
+|Parent volume=HCA 13/71
+|Folio=114
+|Side=Verso
+|Status=Uploaded image; transcribed on 06/11/2012
+|First transcriber=Colin Greenstreet
+|First transcribed=2012/11/06
+|Editorial history=Edited on 11/05/12014 by Colin Greenstreet
+|Note=IMAGE: P1080985.JPG
+}}
+{{PageHelp}}
+{{PageTranscription
+|Transcription image={{#transcription-image: P1080985.JPG}}
+|Transcription=The same day, Examined upon the sayd allegation
+
+'''2'''
+
+'''<Person>Jan Peterson</Person>''' of <Place>Hamburgh</Place> <Occupation>mariner Stiersman</Occupation> of the sayd <Ship>shipp</Ship>
+the <Ship>''Fortune''</Ship> aged three
+and twenty yeares or thereabouts sworne
+and examined saith as followeth. videlicet.
+
+To the .1 .2 .3 and 4th Articles of the sayd allegation This deponent saith, That the sayd <Ship>shipp</Ship>
+<Ship>''Fortune''</Ship> sailing from <Place>France</Place> with her lading of <Commodity>wynes</Commodity> under the Command of
+his Precontest as <Occupation>Master</Occupation> of her and ćoming for the duines was about the end of
+<Time>January</Time> last past seized by the <Ship>''dartmouth frigot''</Ship> arlate. And he saith That
+of his certayne knowledge and by vertue of his Oath that the <Ship>shipp</Ship> <Ship>''Fortune''</Ship>
+or her <Occupation>Master</Occupation> or Company did not any way oppose the sayd frigot nor fly away from
+her, but being summoned did strike her maine topsayle and soone after
+her foresayle and willingly submitted to be visited and seized by the Company
+of the sayd frigot that came on board her for that purpose. And that the sayd
+sayles being so strucke continued so till the seizure, and that there was noe
+fault in the sayd <Occupation>Master</Occupation> or Company of the <Ship>''Fortune''</Ship> or any neglect of duty as
+concerning the striking of their sayles. Which this deponent being the
+<Occupation>Steersman</Occupation> of the sayd <Ship>shipp</Ship> and seeing the sayd passages knoweth to be true
+And otherwise cannot depose.
+
+To the Cross Interrogatories &amp;#91;CENTRE HEADING&amp;#93;
+
+To the 1 and 2. Interrogatories he saith there was neyther Chase, nor flight in the busines in
+question, and saith that he guesssed the sayd frigot to be about a mile from shore
+when he first saw the same, and the <Ship>''Fortune''</Ship> when she was boarded was
+about a mile from shoare. And the Frigot he saith shot twice, and the <Ship>''Fortune''</Ship>
+att the first shot immediately struck her maintopsayle, and upon the second shot
+immediately stuck her foresayle, And the sayd <Ship>shipp</Ship> and frigott att such tyme of
+striking were att an ordinary shotts distance, the sayd frigott wearing the
+<Place>English Colours</Place> all the tyme. And otherwise saving as aforesayd he cannot answere
+
+&amp;#91;?Jon PXXXXon&amp;#93; &amp;#91;SIGNATURE, RH SIDE&amp;#93;
+
+&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;
+
+The same day Examined upon the sayd allegation
+
+'''3'''
+
+'''<Person>Jan Dirickson</Person>''' of <Place>Modenblick in holland</Place> <Occupation>Mariner</Occupation> aged one
+and twenty yeares sworne and examined saith. as followeth. videlicet
+
+To the sayd allegation and severall articles Therein, This deponent saith. That about the
+end of <Time>January</Time> last past the sayd <Ship>shipp</Ship> <Ship>''Fortune''</Ship> and her lading of <Commodity>wines</Commodity> were seized
+by the <Ship>''dartmouth frigot''</Ship> arlate. And he saith That the sayd <Ship>shipp</Ship> did make noe &amp;#91;?manner GUTTER&amp;#93;
+of opposition against, nor did fly from the sayd frigot att all, but was visited and
+seized. without any force, or opposition of her <Occupation>master</Occupation> <Person>daniel Egerson</Person> or any of
+his Company. ffor he saith That immediately upon the first warning the sayd <Person>Egerson</Person>
+caused his maintopsayle to be lowered, and soone after struck his foresayle and
+continued both the sayd sayle so strucken, so as some of the company of the sayd
+frigott came presently on board the <Ship>''Fortune''</Ship> without any opposi&amp;#91;?tion GUTTER&amp;#93;
+and so seized her and her lading and brought the same in to the downes. And there
+was noe fault or neglect in the sayd <Person>Egerson</Person> or his Company at all in the premisses
+And this he knoweth to be true being <Occupation>Cooke</Occupation> in and of the sayd <Ship>shipp</Ship> and seeing
+and well remembring the foresayd passgaes. And otherwise he cannot depose.
+
+To the Crosse Interrogatories. &amp;#91;CENTRE HEADING&amp;#93;
+
+To the sayd Interrogatories hee saith. That the sayd frigot, from her first discovery by the <Ship>''Fortune''</Ship>
+to the sayd seizure, had out the <Place>English Colours</Place> and there was not any chase made att all
+but the <Ship>''Fortune''</Ship> sayled up directly for the <Place>duines</Place> meeting the sayd frigot that ćame that &amp;#91;?way GUTTER&amp;#93;
+and the sayd frigot was neere the shoare att her first being so discovered, and took&amp;#91;?e GUTTER&amp;#93;
+the <Ship>''Fortune''</Ship> about a small dutch mile from the shoare, And further he saith &amp;#91;?that GUTTER&amp;#93;
+the <Ship>''fortune''</Ship> upon her first summons by a shott from the frigot presently lowered her
+top sayle, and soone after upon a second like summons lowered her foresayle
+att which tymes the sayd <Ship>shipp</Ship> and frigott were about musket shott assunder or &amp;#91;?not GUTTER&amp;#93;
+much more. And otherwise he cannot answer.
+
+Jan dirckson &amp;#91;SIGNATURE, RH SIDE&amp;#93;
+}}</text>
+      <sha1>cfqq7d76x46rz4p04i1e97bmidsy3ph</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>HCA 13/71 f.115r Annotate</title>
+    <ns>0</ns>
+    <id>5581</id>
+    <revision>
+      <id>123777</id>
+      <parentid>86182</parentid>
+      <timestamp>2017-12-24T02:54:27Z</timestamp>
+      <contributor>
+        <username>ColinGreenstreet</username>
+        <id>2</id>
+      </contributor>
+      <minor/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="4509">{{PageMetaData
+|Parent volume=HCA 13/71
+|Folio=115
+|Side=Recto
+|Status=Uploaded image; transcribed on 28/11/2012
+|First transcriber=Colin Greenstreet
+|First transcribed=2012/11/28
+|Editorial history=Edited on 11/05/2014 by Colin Greenstreet
+|Note=IMAGE: P1080986.JPG
+}}
+{{PageHelp}}
+{{PageTranscription
+|Transcription image={{#transcription-image: P1080986.JPG}}
+|Transcription=The same day Examined upon the sayd Allegation
+
+'''4'''
+
+'''<Person>Cornelius Peterson</Person>''' of <Place>Edam in holland</Place> <Occupation>Mariner Carpenter</Occupation> of the sayd <Ship>shipp</Ship>
+<Ship>''Fortune''</Ship> aged twenty four yeares or thereabouts a witnes sworne
+and examined saith as followeth. videlicet.
+
+To the .1 .2. 3 .and 4th articles of the sayd Allegation, he saith he is <Occupation>Carpenter</Occupation>
+of the sayd <Ship>shipp</Ship> the <Ship>''Fortune''</Ship> and being on board her att the tyme of the seizure in question, knoweth that the
+sayd <Ship>shipp</Ship> and her lading being <Commodity>wines</Commodity> were upon a <Time>Sunday</Time> about seaven weekes agoe
+taken and seized by the <Ship>''Dartmouth frigot''</Ship>. And further he saith that the <Occupation>master</Occupation> and Company
+of the <Ship>''ffortune''</Ship> did not make and opposition against the sayd frigot, nor did ever fly or
+offer to fly or escape from the same, but willingly and without force permitted their
+<Ship>shipp</Ship> to be visited and seized by the Company of the Frigott who came on board her.
+And also saith that the sayd <Occupation>Master</Occupation> and Company of the <Ship>''Fortune''</Ship> upon the first warning peice
+struck their main top sayle, and their foresayle upon a second warning peice, and
+were not negligent or faulty in that respect, but kept the same so struck and lowered
+till the seizure in question. And otherwise he cannot depose.
+
+To the Interrogatories &amp;#91;CENTRE HEADING&amp;#93;
+
+To the sayd 1 and 2. Interrogatories This Rendent saith That the sayd ffrigot wearing the <Place>English flagg and Colours</Place> mett the <Ship>''Fortune''</Ship> sayling her direct Course for the <Place>downes</Place> and
+that there happened not any chase att all before the sayd seizure, And that the sayd
+frigott came along neere to the shoare, and seized the <Ship>''Fortune''</Ship> neere the shoare,
+that is about a miles distance from land or not much more. And otherwise hee
+cannot depose, saving that att the tyme the sayd warning peices were shott as
+aforesayd the sayd frigot was about an usuall shotts distance from the <Ship>''Fortune''</Ship>.
+
+Repeated with his three precontests before <Person>doctor Godolphin</Person>.
+
+'''cornelis pietersen''' &amp;#91;SIGNATURE, RH SIDE&amp;#93;
+
+&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;
+
+The <Date>eleventh day of March 1655</Date>
+
+'''<Person>Hans Rauce</Person> of <Place>Quinsborough</Place> and Company&amp;#125;
+Owners of the <Ship>shipp</Ship> the <Ship>''hope''</Ship> of&amp;#125;
+<Place>Quinsborough</Place> against <Person>Beniamin and John harrison</Person> and <Person>William Harrington</Person>&amp;#125;
+ffrancklyn&amp;#58; Suckley&amp;#125;
+
+Examined upon an allegation on the behalfe of the sayd
+<Person>Hans Rauce</Person> and Companye
+
+'''<Person>Jan Pieterson</Person>''' of <Place>Lubeck</Place> <Occupation>Mariner and Carpenter</Occupation> of the
+sayd <Ship>shipp</Ship> the <Ship>''Hope''</Ship> aged thirty yeares or therea=
+bouts, a witnes sworne and examined saith as followeth
+videlicet.
+
+To the first Artićle of the sayd allegation This deponent saith that about four or
+five weekes before <Time>Michaelmas last .1655</Time>. (the tyme hee otherwise remembreth
+not there were laden in the sayd <Ship>shipp</Ship> <Ship>''Hope''</Ship> (<Person>Martin Barnhide</Person> <Occupation>Master</Occupation>) att the
+<Place>Port of Quinsborough</Place>, bound for this <Place>Port of London</Place>, thirty bundles of <Commodity>hempe</Commodity>
+marked as in the margent, twenty Spruce deales. more, two bundles of
+
+'''H''' &amp;#91;MARGIN MARKE&amp;#93;
+
+<Commodity>hempe</Commodity>, one hundred of <Commodity>wainscott</Commodity>, one hundred of <Commodity>pipe boards</Commodity>, five hundred
+and an halfe of <Commodity>Clapboard</Commodity>, twelve hundred and an halfe of &amp;#91;?keeving&amp;#93;
+staves, eighty &amp;#91;?keeve&amp;#93; <Commodity>pipe staves</Commodity>, and three hundred an halfe of <Commodity>oares</Commodity>
+all to be transported in the sayd <Ship>shipp</Ship> from <Place>Quinsborough</Place> to <Place>London</Place> and hence
+to be delivered to the respective persons to whom the same were consigned
+who were to pay the freight agreed on for the sayd Transport. All which
+he knoweth to be true for that he sawe the sayd goods laden, and was att the tyme
+of lading told they were for merchants of <Place>London</Place> in whose imployment the sayd <Ship>shipp</Ship>
+was freighted, and being <Occupation>Carpenter</Occupation> of the sayd <Ship>shipp</Ship> came in her to this <Place>Port</Place>.
+And further (referring himselfe to the bills of lading allegate touching the
+merchants and freight) he cannot depose.
+
+To the second article he saith he ćannot depose.
+
+To the third article hee saith that the sayd goods being so laden the <Occupation>Master</Occupation> and Company
+of the sayd <Ship>shipp</Ship> about three weekes before <Time>Michaelmas last</Time> (the tyme hee
+otherwise remembreth not) sett sayle therewith from &amp;#91;?Pilloe&amp;#93; Roade arlate
+for the <Place>Port of London</Place> And the sayd <Ship>shipp</Ship> was at that tyme a tight
+&amp;#91;?stanch&amp;#93; and strong <Ship>shipp</Ship> well fitted with sayle masts yards cables anćhors
+and all other provisions tackle and necessaries fitting for such a voyage
+which he knoweth being <Occupation>Carpenter</Occupation> of her as aforesayd. And otherwise he
+saith he ćannot depose.
+
+To the 4th article he saith that from the tyme of the sayd <Ship>shipps</Ship> departure from &amp;#91;?Pilloe&amp;#93;
+as aforesayd for the space of five or more dayes there happened every day
+Contrary winds and stormy tempestuous weather which he knoweth sailing
+in the sayd <Ship>shipp</Ship> <Occupation>Carpenter</Occupation> of her as aforesayd. And otherwise he saith
+he cannot depose.
+
+To the 5th article he saith that about the fifth or sixth day after the sayd <Ship>shipp</Ship> <Ship>''Hopes''</Ship>
+departure from &amp;#91;?Pilloe&amp;#93; (the particular day of the moneth he remembreth not) the
+wind then blowing from the <Place>South=Southwest</Place> poynt a very violent storme
+happened whereby the foresayles of the sayd <Ship>shipp</Ship> were carryed away as is arlate
+ánd the <Ship>shipp</Ship> receyved much water by reason of the high Seas, and she was
+forced back by that tempest neere fifteene leagues towards the <Place>Pilloe</Place>
+And he saith that the sayd <Occupation>Master</Occupation> and Company of the sayd <Ship>shipp</Ship> did what was
+possible to be done for the preserving the sayd <Ship>shipp</Ship> and her lading, which by
+Gods blessing they did preserve, and after some seven or eight dayes
+came into the <Place>Sound</Place>, and the winds being still Contrary stayd there
+about six or seven dayes, which he knoweth for the reasons aforesayd, and
+otherwise ćannot depose.
+
+To the 6th article he saith that the sayd <Ship>shipp</Ship> after six or seven dayes stay, departed
+from the <Place>Sound</Place> for this <Place>Port of London</Place> and about three dayes after mett with
+a &amp;#123;?most&amp;#125; violent raging storme of wind and tempest from the <Place>North North west</Place>, which began about three of the Clock in an afternoone and continued
+allnight and to the next day. during which storme the sayd <Ship>shipp</Ship> could beare
+noe sayle saving her mainsayle which was lett downe very low, and by
+three of the Clock the next morning the sayd <Ship>shipp</Ship> was driven upon the
+Coast of <Place>Jutland</Place> neere the &amp;#91;?holmes&amp;#93;, and there being twelve fathom
+water then found there were two anchors cast out one after the other
+which by reason of the continued violence of the storme could take noe hold
+whereupon the sayd <Occupation>Master</Occupation> and Company for preserving the sayd <Ship>shipp</Ship> and her lading
+with their owne lives were forced and did cutt downe the maine mast of
+the sayd <Ship>shipp</Ship> which with the yards sayles and cordage thereto belonging were
+carryed overboard into the Sea, and perished and were lost; And then and
+not before the sayd anchors caught fast hold, and there the sayd <Ship>shipp</Ship> lay &amp;#91;?till GUTTER&amp;#93;
+the afternoone of the day att which tyme the wind came to <Place>South South west</Place>
+And then the sayd <Occupation>Master</Occupation> and Company to preserve <Ship>shipp</Ship>, lading, and their lives
+were forced and did Cutt one of their Cables, and one of the anchors did breake
+in weighing, and both anchors were lost, onely one peice of one anchor
+was haled upp with the cable fastned to the sayd broken anchor&amp;#58; This done the
+sayd <Occupation>Master</Occupation> and Company sett sayle for the Coast of <Place>Norway</Place> to preserve their <Ship>shipp</Ship> &amp;#91;?if ?it GUTTER&amp;#93;
+might be, and being come neere the Coast the weather grew so darke
+that the Land could not be discovered nor any haven found All att length
+a <Occupation>fisherman</Occupation> whom they by chance found conducted them into <Place>Gasthaven</Place> in
+<Place>Norway</Place>. The premisses he knoweth to be true seeing and well remem=
+bring the foresayd passages. And otherwise he ćannot depose.
+
+To the 7th article he saith that by the great violence of the sayd Storme and rage of
+the sea the sayd <Ship>shipp</Ship> received in much water, inso much as there was great danger
+of having her swallowed upp in the Sea, by the high Seas that fell upon her
+oftentymes. And the sayd <Occupation>Master</Occupation> and Company did all that was possible for men to &amp;#91;?doe GUTTER&amp;#93;
+to preserve the sayd <Ship>shipp</Ship>. And many other <Ship>shipps</Ship> were lost in that Storme &amp;#91;XX GUTTER&amp;#93;
+&amp;#91;XXXX GUTTER&amp;#93;
+
+To the eighth article hee saith that the sayd great mast yards Ropes and tackle, and
+sayd Cable and Anchor were lost as aforesayd for preservation of the sayd <Ship>shipp</Ship> and
+her lading which he knoweth for the reasons aforesayd. And the sayd mast and
+other the sayd particulars so lost were in his judgment of the value of four
+hundred and sixty six dollars or thereabouts, and that then like cannot be bought
+for a lesser sume of money. And he conceyveth that the sayd losse ought to be
+borne betwixt the sayd <Ship>shipp</Ship> and lading in a rateable proportion. And otherwise he cannot depose.
+
+To the ninth and tenth articles hee saith that the sayd <Ship>shipp</Ship> being so brought to <Place>Gusthaven</Place>
+could not depart to performe her voyage till she was provided of a mast yards
+and other necessaries such as were lost. And none being to be had att <Place>Gasthaven</Place>
+of the sayd <Occupation>Master</Occupation> was forced and did goe to <Place>Christian=Sant</Place> to provide the same and
+there bought a mast, yards two anchors with cordage and some sayles such as hee
+could there procure for which (as upon his returne he did affirme and as this
+deponent beleiveth he payd about three hundred Rijx dollars, and could not gett
+the same cheaper. And he saith that being there in a strange place and having
+not money sufficient to pay for the sayd tackle and necessaries he the sayd <Occupation>Master</Occupation> was
+forced and did borrow seventy Dollars of the Mariners of his Company&amp;#58; and allso
+twenty five dollars of one <Person>Evert Penniake</Person> a <Occupation>Master</Occupation> of a <Ship>shipp</Ship> then att <Place>Christian Sant</Place> (as the sayd <Occupation>Master</Occupation> upon his returne from &amp;#91;XXXXX&amp;#93; to <Place>Gastaven</Place> affirmed) and as this deponent
+beleiveth. And this deponent knoweth that (he the sayd <Occupation>Master</Occupation> (still wanting
+moneyes to pay for the sayd things) did take a bundle of <Commodity>hempe</Commodity> out of the sayd
+<Ship>shipp</Ship> being one of the thirty marked as aforesayd, and he (as he sayd) sold the
+same for about 80 dollars and could not gett more for the same, five of which dollars
+(as he also sayd) were spent in satisfying the Customes and other dutyes for the sayd
+bundle of <Commodity>hempe</Commodity>. And the rest together with some of his owne money
+and the moneyes borrowed as aforesayd making in all (as he sayd) about three
+hundred dollars, were payd for the sayd mast sayles anchors and necessaries above
+mentioned. And the sayd mast was brought a board and sett upp and other the sayd tackle
+fitted for the performing of the sayd voyage of the sight and certayne knowledge
+of this deponent <Occupation>Carpenter</Occupation> in and of the <Ship>''Hope''</Ship> as aforesayd. And otherwise
+he cannot depose.
+
+To the xith article he saith that the sayd <Ship>shipp</Ship> necessarily lay att <Place>Gusthaven</Place> about six
+or seaven weekes to be fitted for her sayd voyage, and then departed and meeting
+with crosse winds was forced to putt into <Place>fflackery</Place> in <Place>Norway</Place> and there to
+stay about eight dayes, and setting sayle from thence for <Place>London</Place> was by
+contrary winds forced to putt into <Place>Newcastle</Place>, whither she came about
+three weekes before <Time>Christmas</Time> last and this deponent in her, whereby he
+knoweth the premisses to be true. And otherwise he cannot depose
+
+To the xijth and xiijth articles he saith that the sayd <Person>Barnhide</Person> did att <Place>Newcastle</Place> hire
+a <Occupation>pilot</Occupation> by name <Person>John Holland</Person> to <Occupation>Pilot</Occupation> the sayd <Ship>shipp</Ship> to <Place>London</Place>, and the sayd <Occupation>Pilot</Occupation>
+came on board and though the winds were crosse yet after some dayes conducted
+the sayd <Ship>shipp</Ship> and lading (the sayd bundle of <Commodity>hempe</Commodity> sold att <Place>Christian sant</Place> excepted)
+safe to <Place>Harwich</Place>, whither being come there was a <Ship>man of Warr</Ship> called
+the <Ship>''Hare=pinke''</Ship> which as was there sayd used to Convoy <Ship>shipps</Ship> to <Place>London</Place>, and
+an <Ship>Harwitch Ketch</Ship> and an <Ship>Hollands hoy</Ship>
+ready to depart for <Place>London</Place>, and
+the Company of the <Ship>''hare''</Ship> understanding that the <Ship>''hope''</Ship> was bound for <Place>London</Place> promised
+to Convoy her, whereupon the <Occupation>Master</Occupation> of the <Ship>''Hope''</Ship> for avoyding the <Ship>Dunkirke frigots</Ship>
+and for Company did assent to goe with them, and so stayed not att <Place>Harwich</Place>
+but departed for <Place>London</Place> with the sayd <Occupation>Pilot</Occupation> still on board, And it was in a morning
+and the <Ship>''Hare''</Ship>, <Ship>Ketch</Ship> and <Ship>hoy</Ship> lead the way and the <Ship>''Hope''</Ship> followed them. And in
+the afternoone of that day the sayd <Ship>''hare Pinke''</Ship> <Ship>Ketch</Ship> and <Ship>hoy</Ship> being still
+on head of the <Ship>''Hope''</Ship> came upon certayne sands off of <Place>Colchester</Place>, And
+the sayd vessells came allso upon the sayd sands and fastned there, And her <Occupation>master</Occupation>
+and Company of this deponents sight and knowledge used their utmost endeavor
+to gett her off. but could not. And otherwise he cannot depose.
+
+To the 15th and 16th articles he saith that the sayd <Ship>''Hare pinke''</Ship> soone after she came
+upon the sayd Sands brake in peices and was lost, and her Company having but
+a small boat and having about thirty two men on board endeavoured to gett the
+boat of the <Ship>''Hope''</Ship>, which the <Occupation>Master</Occupation> and Company of her would not part with
+and so they endeavoured all that was possible to gett their <Ship>shipp</Ship> off, and plyed the
+pumpe, and went not to shoare till being past hope and being in feare
+to loose their boat by the Company of the <Ship>''Hare''</Ship>, they the sayd <Occupation>Master</Occupation> and
+Company of the <Ship>''Hope''</Ship> together with four of the <Ship>''Hares''</Ship> Company that had
+gotten into their boat did in the same boat gett to shoare, And otherwise
+he cannot depose saving that the sayd <Ship>''Hope''</Ship> had taken in much water
+upon the sayd sands before her <Occupation>Master</Occupation> and Company went ashoare as aforesayd
+
+To the 17th. and 18th articles he saith that the sayd <Ship>shipp</Ship> came upon the sayd sands about fower
+leagues from the shoare, and there was noe towne neere to the place, and only one
+poore howse whither the sayd four persons of the <Ship>Pinkes</Ship> Company and the <Occupation>Master</Occupation> and Com
+pany of the <Ship>''hope''</Ship> came about midnight, and they enquired for helpe to gett their
+<Ship>shipp</Ship> from the Sands but could heare of none, but within a day or two heard that
+some <Occupation>fishermen</Occupation> had gotten the <Ship>''Hope''</Ship> from the Sands and that she was gone for <Place>London</Place>
+whither the sayd <Person>Barnhide</Person> this deponent and other his mates went to find her And
+he saith That att the tyme of the sayd disaster upon the sands all the foresayd goods
+laden as aforesayd att <Place>Quinsburgh</Place> were on board the sayd <Ship>shipp</Ship>, and came after
+wards to <Place>London</Place>, and there of this deponents sight were all delivered to the
+persons to who the same were consigned (the fore mentioned bundle of <Commodity>hempe</Commodity>
+sold att <Place>Christian=Sankt</Place> as aforesayd onely excepted) &amp;#91;#&amp;#93;
+
+&amp;#91;#&amp;#93; and except some <Commodity>oares</Commodity>
+&amp;#91;GUTTER ?and&amp;#93; <Commodity>Clapboard</Commodity> which
+&amp;#91;GUTTER XXX&amp;#93; <Occupation>ffishermen</Occupation>
+&amp;#91;GUTTER XXX&amp;#93; and tooke out of
+&amp;#91;GUTTER ?the&amp;#93; <Ship>''Hope''</Ship> as he beleiveth
+'''<Person>Jan XP MARK Peterson</Person>'''
+his marke
+
+And further deposeth not.
+
+To the xixth. Article he saith that all and singular the dammages which
+befell the sayd goods were caused by the fury and violence of the
+foresayd stormes and tempests; and by the disaster upon the forementioned sands
+and not by or through the neglect wilfulnes or default whatsoever of the
+sayd <Person>Martin Barnhide</Person> or his <Ship>shippes</Ship> Company, which this deponent
+being <Occupation>Carpenter</Occupation> of the sayd <Ship>shipp</Ship> and sayling in her as aforesayd well knoweth
+to be true, And otherwise he cannot depose.
+
+To the last he saith That his foregoeing deposition is true.
+
+To the Crosse Interrogatories. &amp;#91;CENTRE HEADING&amp;#93;
+
+To the first second and third Interrogatories This Rendent saith he kept noe <Document>Journall</Document> of the
+foresayd particulars, but well remembreth them as is easy to doe after so short a tyme
+it being but his last voyage. And saith he expecteth nothing whatsoever to come of
+this suit or freight thereby demanded, because he hath receyved ten &amp;#91;??Rijx GUTTER&amp;#93;
+dollars for the halfe voyage att <Place>Quinsburgh</Place> and not returning in the sayd
+<Ship>shipp</Ship> back agayne is not to have any more, nor expecteth any thing &amp;#91;XX GUTTER&amp;#93;
+allso saith that all or most of the <Commodity>hempe</Commodity> aforesayd was wett and damnifyed
+and some <Commodity>oares</Commodity> and <Commodity>Clapboards</Commodity> were missing att the delivery but how
+many he knoweth not, but beleiveth the sayd <Occupation>fishermen</Occupation> had them. And saith
+that the sayd <Person>Barnhide</Person> and Company lost their sayd vessell upon the Sands
+aforesayd. And further saving his foregoeing deposition he cannot other&amp;#91;?wise GUTTER&amp;#93;
+than negatively depose or answere
+
+'''<Person>Jan XP MARK Peterson</Person>'''
+his marke.
+}}</text>
+      <sha1>fn3nfikfc7knosg5qtcvyethyqvlqr7</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>HCA 13/71 f.115v Annotate</title>
+    <ns>0</ns>
+    <id>5690</id>
+    <revision>
+      <id>86185</id>
+      <parentid>86184</parentid>
+      <timestamp>2015-05-21T18:16:21Z</timestamp>
+      <contributor>
+        <username>ColinGreenstreet</username>
+        <id>2</id>
+      </contributor>
+      <minor/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="4479">{{PageMetaData
+|Parent volume=HCA 13/71
+|Folio=115
+|Side=Verso
+|Status=Uploaded image; transcribed on 28/11/2012
+|First transcriber=Colin Greenstreet
+|First transcribed=2012/11/28
+|Editorial history=Edited on 11/05/2014 by Colin Greenstreet
+|Note=IMAGE: P1080987.JPG
+}}
+{{PageHelp}}
+{{PageTranscription
+|Transcription image={{#transcription-image: P1080987.JPG}}
+|Transcription=otherwise remembreth not) sett sayle therewith from &amp;#91;?Pilloe&amp;#93; Roade arlate
+for the Port of <place>London</place> And the sayd shipp was at that tyme a tight
+&amp;#91;?stanch&amp;#93; and strong shipp well fitted with sayle masts yards cables anćhors
+and all other provisions tackle and necessaries fitting for such a voyage
+which he knoweth being <occupation>Carpenter</occupation> of her as aforesayd. And otherwise he
+saith he ćannot depose.
+
+To the 4th article he saith that from the tyme of the sayd shipps departure from &amp;#91;?Pilloe&amp;#93;
+as aforesayd for the space of <time>five or more dayes</time> there happened every day
+Contrary <weather>winds</weather> and <weather>stormy tempestuous weather</weather> which he knoweth sailing
+in the sayd shipp <occupation>Carpenter</occupation> of her as aforesayd. And otherwise he saith
+he cannot depose.
+
+To the 5th article he saith that about the <time>fifth or sixth day</time> after the sayd shipp ''Hopes''
+departure from &amp;#91;?Pilloe&amp;#93; (the particular <date>day of the moneth</date> he remembreth not) the
+<weather>wind then blowing</weather> from the South=Southwest poynt a very violent <weather>storme</weather>
+happened whereby the foresayles of the sayd shipp were carryed away as is arlate
+ánd the shipp receyved much water by reason of the high Seas, and she was
+forced back by that <weather>tempest</weather> neere <quantity>fifteene leagues</quantity> towards the Pilloe
+And he saith that the sayd <occupation>Master</occupation> and company of the sayd shipp did what was
+possible to be done for the preserving the sayd shipp and her lading, which by
+Gods blessing they did preserve, and after some <time>seven or eight dayes</time>
+came into the Sound, and the <weather>winds</weather> being still Contrary stayd there
+about <time>six or seven dayes</time>, which he knoweth for the reasons aforesayd, and
+otherwise ćannot depose.
+
+To the 6th article he saith that the sayd shipp after <time>six or seven dayes</time> stay, departed
+from the Sound for this <place>Port of London</place> and about <time>three dayes</time> after mett with
+a &amp;#123;?most&amp;#125; violent raging <weather>storme</weather> of <weather>wind</weather> and <weather>tempest</weather> from the North North
+west, which began about <time>three of the Clock in an afternoone</time> and continued
+allnight and to the next day. during which <weather>storme</weather> the sayd shipp could beare
+noe sayle saving her mainsayle which was lett downe very low, and by
+<time>three of the Clock the next morning</time> the sayd shipp was driven upon the
+<place>Coast of Jutland</place> neere the &amp;#91;?holmes&amp;#93;, and there being <quantity>twelve fathom</quantity>
+water then found there were two anchors cast out one after the other
+which by reason of the continued violence of the <weather>storme</weather> could take noe hold
+whereupon the sayd <occupation>Master</occupation> and company for preserving the sayd shipp and her lading
+with their owne lives were forced and did cutt downe the maine mast of
+the sayd shipp which with the yards sayles and cordage thereto belonging were
+carryed overboard into the Sea, and perished and were lost; And then and
+not before the sayd anchors caught fast hold, and there the sayd shipp lay &amp;#91;?till GUTTER&amp;#93;
+the afternoone of the day att which tyme the <weather>wind</weather> came to South South &amp;#91;?west GUTTER&amp;#93;
+And then the sayd <occupation>Master</occupation> and company to preserve shipp, lading, and their lives
+were forced and did Cutt one of their Cables, and one of the anchors did breake
+in weighing, and both anchors were lost, onely one peice of one anchor
+was haled upp with the cable fastned to the sayd broken anchor&amp;#58; This done the
+sayd <occupation>Master</occupation> and company sett sayle for the Coast of <place>Norway</place> to preserve their shipp &amp;#91;?if ?it GUTTER&amp;#93;
+might be, and being come neere the Coast the <weather>weather grew so darke</weather>
+that the Land could not be discovered nor any haven found All att length
+a <occupation>fisherman</occupation> whom they by chance found conducted them into <place>Gasthaven in
+<place>Norway</place>. The premisses he knoweth to be true seeing and well remem=
+bring the foresayd passages. And otherwise he ćannot depose.
+
+To the 7th article he saith that by the great violence of the sayd <weather>Storme</weather> and rage of
+the sea the sayd shipp received in much water, inso much as there was great danger
+of having her swallowed upp in the Sea, by the high Seas that fell upon her
+oftentymes. And the sayd <occupation>Master</occupation> and company did all that was possible for men to &amp;#91;?doe GUTTER&amp;#93;
+to preserve the sayd shipp. And many other shipps were lost in that <weather>Storme</weather> &amp;#91;XX GUTTER&amp;#93;
+&amp;#91;XXXX GUTTER&amp;#93;
+}}</text>
+      <sha1>88itbty32uflnsarif6lxwl4qpoh4kd</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>HCA 13/71 f.116r Annotate</title>
+    <ns>0</ns>
+    <id>5694</id>
+    <revision>
+      <id>86191</id>
+      <parentid>37704</parentid>
+      <timestamp>2015-05-21T18:23:12Z</timestamp>
+      <contributor>
+        <username>ColinGreenstreet</username>
+        <id>2</id>
+      </contributor>
+      <minor/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="4457">{{PageMetaData
+|Parent volume=HCA 13/71
+|Folio=116
+|Side=Recto
+|Status=Uploaded image; transcribed on 02/11/2012
+|First transcriber=Colin Greenstreet
+|First transcribed=2012/11/02
+|Editorial history=Edited on 20/06/2013 by Jill Wilcox and on 11/05/2014 by Colin Greenstreet
+|Note=IMAGE: P1080988.JPG
+}}
+{{PageHelp}}
+{{PageTranscription
+|Transcription image={{#transcription-image: P1080988.JPG}}
+|Transcription=appeared as well by generall report as peices of shipps that were seene floating
+after their perishing. And this <person>deponent</person> for his part doth verily beleive
+that in case the sayd <ship>shipp</ship> had not bene a strong stanch and able <ship>shipp</ship>, or in case
+her <person>Master</person> and <person>Company</person> had not shewed their labour and diligence as aforesayd
+the sayd <ship>shipp</ship> and all her lading in her had perisht and bene lost by the
+extreme violence of the sayd <weather>tempest</weather>. And otherwise he cannot depose.
+
+To the eighth article hee saith that the sayd great <quantity>mast yards Ropes and tackle, and
+sayd Cable and Anchor</quantity> were lost as aforesayd for preservation of the sayd <ship>shipp</ship> and
+her lading which he knoweth for the reasons aforesayd. And the sayd <quantity>mast and
+other the sayd particulars</quantity> so lost were in his judgment of the value of <quantity>four
+hundred and sixty six dollars</quantity> or thereabouts, and that then like cannot be bought
+for a lesser sume of money. And he conceyveth that the sayd losse ought to be
+borne betwixt the sayd <ship>shipp</ship> and lading in a rateable proportion. And otherwise he cannot depose.
+
+To the ninth and tenth articles hee saith that the sayd <ship>shipp</ship> being so brought to <place>G&#91;?a&#93;sthaven</place>
+could not depart to performe her voyage till she was provided of a <quantity>mast yards
+and other necessaries</quantity> such as were lost. And none being to be had att <place>Gasthaven</place>
+of the sayd <person>Master</person> was forced and did goe to <place>Christian=Saint</place> to provide the same and
+there bought a <quantity>mast, yards two anchors with cordage and some sayles</quantity> such as hee
+could there procure for which (as upon his returne he did affirme and as this
+<person>deponent</person> beleiveth he payd about <quantity>three hundred Rijx dollars</quantity>, and could not gett
+the same cheaper. And he saith that being there in a strange place and having
+not money sufficient to pay for the sayd <quantity>tackle and necessaries</quantity> he the sayd <person>Master</person> was
+forced and did borrow <quantity>seventy Dollars</quantity> of the <person>Mariners of his Company</person>; and allso
+<quantity>twenty five dollars</quantity> of one <person>Evert Penniake</person> a <occupation>Master</occupation> of a <ship>shipp</ship> then att <place>Christian
+Sant</place> (as the sayd <person>Master</person> upon his returne from &#91;XXXXX&#93; to <place>Gastaven</place> affirmed) and as this <person>deponent</person>
+beleiveth. And this <person>deponent</person> knoweth that (he the sayd <person>Master</person> (still wanting
+moneyes to pay for the sayd things) did take a bundle of <commodity>hempe</commodity> out of the sayd
+<ship>shipp</ship> being one of the <quantity>thirty</quantity> marked as aforesayd, and he (as he sayd) sold the
+same for about <quantity>80 dollars</quantity> and could not gett more for the same, <quantity>five of which dollars</quantity>
+(as he also sayd) were spent in satisfying the <occupation>Customes</occupation> and other dutyes for the sayd
+bundle of <commodity>hempe</commodity>. And the rest together with some of his owne money
+and the moneyes borrowed as aforesayd making in all (as he sayd) about <quantity>three
+hundred dollars</quantity>, were payd for the sayd <quantity>mast sayles anchors and necessaries</quantity> above
+mentioned. And the sayd <quantity>mast</quantity> was brought a board and sett upp and other the sayd <quantity>tackle</quantity>
+fitted for the performing of the sayd voyage of the sight and certayne knowledge
+of this <occupation>deponent Carpenter</occupation> in and of the <ship>Hope</ship> as aforesayd. And otherwise
+he cannot depose.
+
+To the xith article he saith that the sayd <ship>shipp</ship> necessarily lay att <place>Gusthaven</place> about <time>six
+or seaven weekes</time> to be fitted for her sayd voyage, and then departed and meeting
+with crosse <weather>winds</weather> was forced to putt into <place>fflackery in Norway</place> and there to
+stay about <time>eight dayes</time>, and setting sayle from thence for <place>London</place> was by
+contrary <weather>winds</weather> forced to putt into <place>Newcastle</place>, whither she came about
+<time>three weekes</time> before <time>Christmas</time> last and this <person>deponent</person> in her, whereby he
+knoweth the premisses to be true. And otherwise he cannot depose
+
+To the xijth and xiijth articles he saith that the sayd <person>Barnhide</person> did att <place>Newcastle</place> hire
+a <occupation>pilot</occupation> by name <person>John Holland</person> to <occupation>Pilot</occupation> the sayd <ship>shipp</ship> to <place>London</place>, and the sayd <occupation>Pilot</occupation>
+came on board and though the <weather>winds</weather> were crosse yet after some dayes conducted
+the sayd <ship>shipp</ship> and lading (the sayd bundle of <commodity>hempe</commodity> sold att <place>Christian sant</place> excepted)
+safe to <place>Harwich</place>, whither being come there was a <occupation>man of Warr</occupation> called
+the <ship>Hare=pinke</ship> which as was there sayd used to <occupation>Convoy</occupation> shipps to <place>London</place>, and
+an <occupation>Harwitch Ketch</occupation> and an <occupation>Hollands hoy</occupation> ready to depart for <place>London</place>, and
+the
+}}</text>
+      <sha1>akhnzh6g1wywufejldtby0mc8fzt3vc</sha1>
+    </revision>
+  </page>
+ <page>
+  <title>HCA 13/71 f.116v Annotate</title>
+  <ns>0</ns>
+  <id>5476</id>
+  <revision>
+    <id>86189</id>
+    <parentid>36408</parentid>
+    <timestamp>2015-05-21T18:21:19Z</timestamp>
+    <contributor>
+      <username>ColinGreenstreet</username>
+      <id>2</id>
+    </contributor>
+    <minor/>
+    <model>wikitext</model>
+    <format>text/x-wiki</format>
+    <text xml:space="preserve" bytes="4868">{{PageMetaData
+|Parent volume=HCA 13/71
+|Folio=116
+|Side=Verso
+|Status=Uploaded image; transcribed on 02/11/2012
+|First transcriber=Colin Greenstreet
+|First transcribed=2012/11/02
+|Editorial history=Edited on 11/05/2014 by Colin Greenstreet
+|Note=IMAGE: P1080989.JPG
+}}
+{{PageHelp}}
+{{PageTranscription
+|Transcription image={{#transcription-image: P1080989.JPG}}
+|Transcription=the Company of the <ship>''<ship>hare</ship>''</ship> understanding that the <ship>''<ship>hope</ship>''</ship> was bound for <place>London</place> promised
+to Convoy her, whereupon the <occupation>Master</occupation> of the <ship>''<ship>Hope</ship>''</ship> for avoiding the <ship>Dunkirke</ship> frigots
+and for Company did assent to go with them, and so stayed not at <place>Harwich</place>
+but departed for <place>London</place> with the said <occupation>pilott</occupation> still on board, And it was in a <time>morning</time>
+and the <ship>''<ship>Hare</ship>''</ship>, <ship>Ketch</ship> and <ship>hoy</ship> led the way and the <ship>''<ship>Hope</ship>''</ship> followed them. And in
+the <time>afternoon</time> of that day the said <ship>''<ship>hare Pinke</ship>''</ship>, <ship>ketch</ship> and <ship>hoy</ship> being still
+on head of the <ship>''<ship>Hope</ship>''</ship> came upon certain sands off of <place>Colchester</place>, And
+the said vessels came also upon the said sands and fastened there, And her <occupation>master</occupation>
+and Company of this deponent's sight and knowledge used their utmost endeavor
+to get her off. but could not. And otherwise he cannot depose.
+
+To the 15th and 16th articles he saith that the said <ship>''<ship>Hare pinke</ship>''</ship> soon after she came
+upon the said Sands broke in pieces and was lost, and her Company having but
+a small boat and having about <quantity>thirty two men</quantity> on board endeavored to get the
+boat of the <ship>''<ship>Hope</ship>''</ship>, which the <occupation>Master</occupation> and Company of her would not part with
+and so they endeavored all that was possible to get their ship off, and plied the
+pumpe, and went not to shore till being past hope and being in fear
+to lose their boat by the Company of the <ship>''<ship>Hare</ship>''</ship>, they the said <occupation>Master</occupation> and
+Company of the <ship>''<ship>Hope</ship>''</ship> together with four of the <ship>''<ship>Hare</ship>''</ship>'s Company that had
+gotten into their boat did in the same boat get to shore, And otherwise
+he cannot depose saving that the said ship <ship>''<ship>Hope</ship>''</ship> had taken in much water
+upon the said sands before her <occupation>Master</occupation> and Company went ashore as aforesaid
+
+To the 17th. and 18th articles he saith that the said ship came upon the said sands about <quantity>four leagues</quantity> from the shore, and there was no town near to the place, and only one
+poor house whither the said four persons of the <ship>Pinke's</ship> Company and the <occupation>Master</occupation> and Com
+pany of the <ship>''<ship>Hope</ship>''</ship> came about <time>midnight</time>, and they enquired for help to get their
+ship from the Sands but could hear of none, but within a day or two heard that
+some fishermen had gotten the <ship>''<ship>Hope</ship>''</ship> from the Sands and that she was gone for <place>London</place>
+whither the said <person>Barnhide</person> this deponent and other his mates went to find her And
+he saith That at the time of the said disaster upon the sands all the foresaid goods
+laden as aforesaid at <place>Quinsburgh</place> were on board the said ship, and came after
+wards to <place>London</place>, and there of this deponent's sight were all delivered to the
+persons to who the same were consigned (the fore mentioned bundle of <commodity>hempe</commodity>
+sold at <place>Christian=Sankt</place> as aforesaid only excepted) &#91;#&#93;
+
+&#91;#&#93; and except some oares
+&#91;GUTTER ?and&#93; <commodity>Clapboard</commodity> which
+&#91;GUTTER XXX&#93; fishermen
+&#91;GUTTER XXX&#93; and took out of
+&#91;GUTTER ?the&#93; <ship>''<ship>Hope</ship>''</ship> as he believeth
+<person>Jan</person> '''XP''' <person>Peterson</person>
+his marke
+
+And further deposeth not.
+
+To the xixth. Article he saith that all and singular the damages which
+befell the said goods were caused by the fury and violence of the
+foresaid <weather>stormes and tempests</weather>; and by the disaster upon the forementioned sands
+and not by or through the neglect wilfulness or default whatsoever of the
+said <person>Martin Barnhide</person> or his ship's Company, which this deponent
+being <occupation>Carpenter</occupation> of the said ship and sailing in her as aforesaid well knoweth
+to be true, And otherwise he cannot depose.
+
+To the last he saith That his foregoing deposition is true.
+
+To the Crosse Interrogatories. &#91;CENTRE HEADING&#93;
+
+To the first second and third Interrogatories This Rendent saith he kept no Journal of the
+foresaid particulars, but well remembreth them as is easy to do after so short a time
+it being but his last voyage. And saith he expecteth nothing whatsoever to come of
+this suit or freight thereby demanded, because he hath received ten &#91;??Rijx GUTTER&#93;
+dollars for the half voyage at <place>Quinsburgh</place> and not returning in the said
+ship back again is not to have any more, nor expecteth anything &#91;XX GUTTER&#93;
+also saith that all or most of the <commodity>hempe</commodity> aforesaid was wet and damaged
+and some <commodity>oares and Clapboards</commodity> were missing at the delivery but how
+many he knoweth not, but believeth the said fishermen had them. And saith
+that the said <person>Barnhide</person> and Company lost their said vessel upon the Sands
+aforesaid. And further saving his foregoing deposition he cannot other&#91;?wise GUTTER&#93;
+than negatively depose or answer
+
+<person>Jan</person> '''XP''' &#91;MARK&#93; <person>Peterson</person>
+his marke.
+}}</text>
+      <sha1>fn3nfikfc7knosg5qtcvyethyqvlqr7</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>HCA 13/71 f.117r Annotate</title>
+    <ns>0</ns>
+    <id>5681</id>
+    <revision>
+      <id>86187</id>
+      <parentid>37611</parentid>
+      <timestamp>2015-05-21T18:19:15Z</timestamp>
+      <contributor>
+        <username>ColinGreenstreet</username>
+        <id>2</id>
+      </contributor>
+      <minor/>
+      <model>wikitext</model>
+      <format>text/x-wiki
+
+<format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="4592">{{PageMetaData
+|Parent volume=HCA 13/71
+|Folio=117
+|Side=Recto
+|Status=Uploaded image; transcribed on 05/11/2012
+|First transcriber=Colin Greenstreet
+|First transcribed=2012/11/05
+|Editorial history=Edited on 17/6/2013, on 03/05/2014 and on 11/05/2014 by Colin Greenstreet
+|Note=IMAGE: P1080990.JPG
+}}
+{{PageHelp}}
+{{PageTranscription
+|Transcription image={{#transcription-image: P1080990.JPG}}
+|Transcription=The xijth day of <date>March</date> <date>1655</date> &#91;CENTRE HEADING&#93;
+
+Examined upon the said allegation.
+
+'''2'''
+
+'''<person>Gabriel Smell</person>''' of <place>Lubeck</place> <occupation>Mariner</occupation> late <occupation>Steersman</occupation> of the said ship
+the <ship>''<ship>Hope</ship>''</ship> aged <quantity>thirty years</quantity> or thereabouts a witness sworn and
+examined saith as followeth.
+
+To the first and second Articles of the said allegation, This deponent saith, that about the time
+arlate there were laden on board the said ship the <ship>''<ship>Hope</ship>''</ship> at <place>Quinsburgh</place> arlate
+<quantity>two and thirty bundles</quantity> of <commodity>hempe</commodity>, <quantity>one hundred</quantity> of <commodity>wainscott</commodity>, <quantity>one hundred</quantity>
+of <commodity>pipe-boards</commodity>, <quantity>five hundred and one half</quantity> of <commodity>Clapboard</commodity>, <quantity>twelve hundred</quantity> and
+an half <commodity>keeven staves</commodity>, <commodity>keepe pipe staves</commodity> and <quantity>three hundred</quantity> and
+an half of <commodity>Oares</commodity>, all to be transported to <place>London</place> for several <occupation>English merchants</occupation>
+at a freight agreed by their <occupation>Correspondents</occupation> or <occupation>factors</occupation>
+at <place>Quinsbourgh</place>, The Premises he came to know being <occupation>Steersman</occupation> of the said
+ship this voyage. And further he cannot depose.
+
+To the 3rd. 4th and 5th Interrogatories he saith That the said ship the &#91;#&#93;
+
+&#91;LH MARGIN&#93; &#91;#&#93; &#91;XXXXX was a strong
+&#91;and well provided&#93;
+&#91;GUTTER XXXXX cables
+&#91;GUTTER XXXX and tackle
+&#91;GUTTER XXXX XXXXX
+&#91;GUTTER XXX And&#93;
+&#91;GUTTER XX XXXX&#93; &#91;SIGNATURE, LH MARGIN&#93;
+
+departed with her said lading
+from the &#91;?Pilloa&#93; soon after the beginning of <date>September</date>, and met with excee=
+ding bad weather and <weather>Crosse winds</weather> in the <place>East sea</place> which continued many days
+and was often tempestuous so as in one <weather>storm</weather> the said ship took in much water lost her foresails
+and was driven many leagues backward out of her Course, but came at last
+to the <place>Sondt</place> of <place>denmarke</place> and there by reason of <weather>Crosse winds</weather> stayed about
+<time>eight days</time>, And then departed from thence. which he knoweth being <occupation>Steersman</occupation>
+man of the said ship as aforesaid.
+
+To the 6. 7. and 8th. articles. he saith that within <time>two or three days</time> after the <ship>Hopes</ship>
+departure from the <place>Sondt</place> aforesaid she met with a most fierce and violent <weather>storm</weather>
+the wind blowing from about the <weather>Northwest point</weather>, wherein she was in exceeding
+great danger of perishing with her lading. the winds being so high that she
+could bear no sail but her main sail, which was let down very low. the
+said storm he saith began in an <time>afternoon</time> and continued to the next day
+and drew the said ship near the <place>Holmes</place> not far from <place>Jutland</place>, and there
+the water being about <quantity>twelve fathom</quantity> two anchors were cast out but could not get
+no fast hold so as the <occupation>Master</occupation> of the said ship <person>Martyn Barnhide</person> and Company
+for preserving the said ship and her lading did necessarily resolve and did
+cut down the mainmast which with the yards sails and tackle were by the
+violence of the wind borne overboard and were lost in the sea, And the next
+day after midday the wind changing and coming about the <weather>Southwest point</weather>
+The said <person>Barnhide</person> and Company for preservation of the said ship and
+her lading were constrained to cut one of their cables, and as they endeavored
+to weigh up one of their anchors the same broke in pieces, so as both the said
+Anchors were lost. only he saith a piece of one anchor was recovered. And
+then the said ship set sail for the <place>Coast of Norway</place> and was at last through much
+danger conducted by a <occupation>fisherman</occupation> (whom by chance she met with) into <place>Gusthaven</place>
+arlate. And he moreover saith that by credible report which he then heard in
+<place>Norway</place> many ships perished in the said storm, and so in all probability the
+<ship>''<ship>Hope</ship>''</ship> and her lading had done if she had not been a very strong ship or in case
+the <occupation>Master</occupation> and Company of her had not used their utmost industry to preserve her, which
+he saith they did as far as was possible for men to do. And saith also that
+the said mast was cut and said sails yards ropes and tackle lost, and the said anchor
+and half and half cable likewise for preserving of the said ship and lading.
+the value of which things so lost he conceiveth to be about <quantity>four hundred and
+thirty dollars</quantity>, and also believeth that the goods being so preserved ought to contribute
+towards the said loss. And otherwise he cannot depose saving that in the said
+storm the said ship received great quantities of water into her.
+
+To
+}}</text>
+      <sha1>kpnzidvt61mils3ugc7ash2ce90pf0x</sha1>
+    </revision>
+ <mediawiki>
+  </page>
+  <page>
+    <title>HCA 13/71 f.117v Annotate</title>
+    <ns>0</ns>
+    <id>6534</id>
+    <revision>
+      <id>122149</id>
+      <parentid>86193</parentid>
+      <timestamp>2017-10-09T21:24:28Z</timestamp>
+      <contributor>
+        <username>ColinGreenstreet</username>
+        <id>2</id>
+      </contributor>
+      <minor/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="4306">{{PageMetaData
+|Parent volume=HCA 13/71
+|Folio=117
+|Side=Verso
+|Status=Uploaded image; transcribed on 05/11/2012
+|First transcriber=<person>Colin Greenstreet</person>
+|First transcribed=<date>2012/11/05</date>
+|Editorial history=Edited on <date>11/05/2014</date> by <person>Colin Greenstreet</person>
+|Note=IMAGE: P1080991.JPG
+}}
+{{PageHelp}}
+{{PageTranscription
+|Transcription image={{#transcription-image: P1080991.JPG}}
+|Transcription=To the 9. 10. and 11th. articles he saith That the sayd <ship>shipp</ship> having suffered so much
+in the sayd <weather>storme</weather> was of necessity to be fitted with what she lacked before shee
+could proceed on her voyage for <place>London</place>, To which purpose the sayd <person>Barnhide</person>
+(<place>Gusthaven</place> not affording such things) did goe to <place>Christian=Sandt</place> in <place>Norway</place>
+and there provided a new mast which was fitted and sett upp, on board
+the <ship>''Hope''</ship>, and also two anchors and some sayles and Cordage such as that place
+afforded. And he borrowed seventy <quantity>Rijx dollars</quantity> of his shipps Company
+towards the paying for the sayd things; and had also some moneyes from one
+<person>&amp;#91;?Peninck&amp;#93;</person> (but how much he knoweth not). and also sold a bundle of <commodity>hempe</commodity>
+for the same purpose, but for how much he knoweth not. neyther knoweth he
+what the sayd things cost. And he saith that for the fitting of the sayd shipp
+<time>seaven weekes</time> were spent, and then she departed for <place>London</place> but was
+forced by <weather>Crosse winds</weather> into <place>Flackery</place> as is allegat and there stayed
+about <time>eight dayes</time>, and then coming for <place>England</place> and this <place>Port</place>
+of <place>London</place>, the winds at length not favouring, did putt into <place>Newcastle</place>
+about the beginning of <date>december last</date>. All which he knoweth being
+of her Company as aforesayd. And otherwise he cannot depose.
+
+To the 12. 13. 14. and 15th articles he saith that the <ship>''Hope''</ship> stayed at <place>Newcastle</place> about
+<time>four dayes</time> in which time the sayd <person>Barnhide</person> hired one <person>Holland</person> a pilot there
+to bring the sayd shipp to <place>London</place>, which the sayd <person>Holland</person> undertooke to doe
+and did after about <time>eight dayes</time> bring her and her lading to <place>Harwich</place>
+whither she came in a morning and stayd not there for that there was
+the <ship>''Hare pinke''</ship> being an <nationality>English</nationality> man of warr and a <ship>Ketch</ship>, and an <ship>hoy</ship>
+then departing for <place>London</place>, and the Captaine of the sayd <ship>Pinke</ship> promising to
+Convoy the <ship>''Hope''</ship> to her Port, the sayd <ship>Pinke</ship>, <ship>ketch</ship>, and <ship>hoy</ship> sett sayle and
+lead the way, and the <ship>''Hope''</ship> followed them having her foresayd Pilott
+still on board her, And in the afternoone of the same day the sayd vessells
+sayling as aforesayd came upon the Sands arlate. and the <ship>Pinke</ship> and <ship>''Hope''</ship>
+stuck fast. And the sayd <ship>Pinke</ship> within a small time was beaten in peices
+and perished, and the <ship>''Hope''</ship> stuck so fast that though all possible meanes
+were used she could not be gott off. thereupon the Company of the <ship>Pinke</ship>
+being about <quantity>thirty persons</quantity> not being able to gett all safe a shoare in their
+owne boat which was but small did endeavour to gett the <ship>''Hopes''</ship> boat which
+the sayd <person>Barnhide</person> and Company would not part with, but, desiring to stay by
+their ship to loose her if possible, kept their boat to save their owne
+lives if the case should come to extremity. Of the premisses he was an eye=
+witnes and otherwise cannot depose.
+
+To the 16. and 17th. articles he saith That at length four of the <ship>''Hare pinkes''</ship>
+Company got into the <ship>''Hopes''</ship> boat, and acquainted the sayd <person>Barnhide</person> of the danger that
+might befall him if the rest of the <ship>''Hares''</ship> Company should take his boat from
+him, saying that they did intend so to doe, whereupon the sayd <person>Barnhide</person> and
+his Company finding their endeavours to gett their shipp off the Sands to be
+fruitless, and being sollicited by the sayd four persons as aforesayd did with
+them goe to shoare in their sayd boat. And the sayd shipp <ship>''Hope''</ship> before her
+Master and Company so left her had received much water in her hold, the
+Premisses he knoweth being then present aboard her. And otherwise he cannot
+depose, saving that the sayd disasters happened about <quantity>three leagues</quantity>
+from shoare, and that it was <time>midnight</time> before the <ship>''Hopes''</ship> boat with the people
+in her came to shoare, and saving that there was noe towne there and but
+one little howse, and that noe help could be heard of to gett off the sayd
+shipp from the Sands, and that afterwards there was newes that some ffishermen
+had gotten her loose and were carrying her for <place>London</place> whereupon the sayd
+<person>Barnhide</person> and Company came up to this Port.
+
+To
+}}</text>
+      <sha1>5jmilwjm4ettfgalcea9uo13vplnfxk</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>HCA 13/71 f.118r Annotate</title>
+    <ns>0</ns>
+    <id>6324</id>
+    <revision>
+      <id>85612</id>
+      <parentid>85502</parentid>
+      <timestamp>2015-05-20T15:39:21Z</timestamp>
+      <contributor>
+        <username>ColinGreenstreet</username>
+        <id>2</id>
+      </contributor>
+      <minor/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="4050">{{PageMetaData
+|Parent volume=HCA 13/71
+|Folio=118
+|Side=Recto
+|Status=Uploaded image; transcribed on 05/09/2012
+|First transcriber=<person>Colin Greenstreet</person>
+|First transcribed=<date>2012/09/05</date>
+|Editorial history=Edited on <date>11/05/2014</date> by <person>Colin Greenstreet</person>
+|Note=IMAGE: P1130406.JPG
+}}
+{{PageHelp}}
+{{PageTranscription
+|Transcription image={{#transcription-image: P1130406.JPG}}
+|Transcription=To the 18th and 19th articles of the sayd allegation This deponent saith That at such tyme as
+the sayd <ship>shipp</ship> came upon the sayd sands, all the foresayd goods laden in her at <place>Quinsburg</place>
+as aforesayd, (the sayd bundle of <commodity>hemp</commodity> sold at <place>Christian Sandt</place> excepted) were on board
+her. And were all (except as before excepted, and except some <commodity>Clapboard</commodity> and
+some of the <commodity>Oares</commodity> which he believeth the Fishermen aforesayd took out of her) delivered in this
+<place>Port</place> to the parties to whom they were consigned, this deponent being present at
+and assisting in the delivery of them. And he lastly saith that all the damage
+which happened to the sayd goods did come and happen to the same by reason of
+the sayd severall storms aforesayd, and by reason of the disaster of the
+sayd shipps coming upon the sayd sands, And the master and Company of
+the sayd shipp did during the whole voyage doe their best endeavour
+in their respective duties, and that no damage at all befell the sayd
+goods or any of them by the fault or neglect of the sayd master and Company
+which he knoweth to be true being Steersman of the sayd shipp and an
+eye-witnesse of all that happened in manner aforesayd.
+
+To the last he saith his deposition is true.
+
+To the Crosse Interrogatories &amp;#91;CENTRE HEADING&amp;#93;
+
+To the first Interrogatorie This Rendent saith That he was hired to sayde he sayd shipp
+from <place>Quinsborough</place> to <place>London</place> and back again to <place>Quinsborough</place>, And he received
+one half of his pay (being <quantity>four and twenty Rijx dollars</quantity>) at <place>Quinsborough</place>
+and in case the <ship>''Hope''</ship> had proceeded on her sayd voyage from hence was to have
+received the other half at this <place>Port</place>. but now he hath hired himself into
+another shipp and expects nothing more for his service in the <ship>''Hope''</ship>. And
+saith he kept no Journal of the storms particulars interrat, but can
+easily remember the same in such sort as he hath declared. And further
+saving as aforesayd he cannot answer.
+
+To the .2. Interrogatory he saith that the sayd <commodity>hemp</commodity> was all wett and damaged, and
+some of the <commodity>Clapboard</commodity> and <commodity>Oares</commodity> wanting as aforesayd. And further he cannot depose.
+
+To the 3d he saith the sayd <person>Barnhide</person> and Company did leave their shipp upon
+the Sands as aforesayd. And some Fishermen did gett her off and sailed
+her for <place>London</place> as aforesayd. And as for the suit at Law interrate or salvage
+paid for the sayd goods or other expenses This Rendent knoweth nothing
+nor can further or otherwise answer
+
+Repeated with his precontest before <person>doctor Godolphin</person>/.
+
+<person>gabriell Smell</person> &amp;#91;SIGNATURE, RH SIDE&amp;#93;
+
+&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;
+
+On the behalf of <person>John digby</person>&amp;#125;
+of <place>London</place> merchant&amp;#125;
+
+The <date>fourteenth day of March.1655</date>.
+
+<person>John Whittell</person> of the parish of <place>Saint Maudlins Milkestreet London</place>
+Secretary to the worshipful Commissioners for prize goods sworn
+before the right worshipful <person>John Godolphin</person> doctor of Lawes, one of the Judges
+of the high Court of Admiralty saith as followeth videlicet.
+
+That the foresayd Commissioners for prize goods by virtue of an order of his
+highness the <person>Lord Protector</person> and the Council being of the tenor following. videlicet.
+<date>Tuesday 8th May 1655</date>. At the Council at <place>Whitehall</place>. Whereas an Arrest
+and seizure having been hereto fore made within the Territories of the <person>King
+of denmark</person> of divers shipps and goods of this Commonwealth, by Order
+of the sayd King, some of the shipps and goods belonging to the Subjects of
+that King were (in regard thereof) seized upon within the Ports or by the
+shipps of this Commonwealth in the year <date>1652</date>. That is to say the shipp the
+<ship>''Maria''</ship>
+}}</text>
+      <sha1>lek4op6owbpo7bds1cncy19dxk8q505</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>HCA 13/71 f.118v Annotate</title>
+    <ns>0</ns>
+    <id>6308</id>
+    <revision>
+      <id>85590</id>
+      <parentid>85503</parentid>
+      <timestamp>2015-05-20T15:24:34Z</timestamp>
+      <contributor>
+        <username>ColinGreenstreet</username>
+        <id>2</id>
+      </contributor>
+      <minor/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="3254">{{PageMetaData
+|Parent volume=HCA 13/71
+|Folio=118
+|Side=Verso
+|Status=Uploaded image; transcribed on 29/08/2012
+|First transcriber=<person>Colin Greenstreet</person>
+|First transcribed=<date>2012/08/29</date>
+|Editorial history=Edited on <date>11/05/2014</date> by <person>Colin Greenstreet</person>
+|Note=IMAGE: P1130407.JPG
+}}
+{{PageHelp}}
+{{PageTranscription
+|Transcription image={{#transcription-image: P1130407.JPG}}
+|Transcription= <ship>''Maria''</ship> of <place>Copenhagen</place>, the shipp the <ship>''Lynworme''</ship> of <place>Tunsborough</place>, the
+shipp the <ship>''Saint John''</ship> of <place>ffrederickstat</place>, the shipp the <ship>''Saint Olave''</ship> of
+<place>Bergen</place> <person>Christian Johnson</person> Master, the shipp the <ship>''Hector''</ship> taken by the
+<ship>''Adventure''</ship>, and the shipp <ship>''Justice''</ship> of <place>Copenhagen</place> <person>John Mathewes</person>
+Master. Ordered by his highness the <person>Lord Protector</person> and the Council
+that the Commissioners for prize goods, of and hereby are empowered
+and require forthwith to make sale of the sayd shipps before named, and
+of the goods provisions and furniture thereunto belonging to the best
+benefit and advantage of the State. '''&amp;#91;signed&amp;#93;'''  <person>Hen&amp;#58; Scobell</person> Clerk
+of the Council&amp;#93; Did upon the <date>seventh day of September 1655</date>.
+last past sell one of the says shipps mentioned in the sayd Order by the name
+of the <ship>''Lynworme''</ship> of <place>Tunsborough</place> and furniture thereunto belonging unto the foresayd <person>John Digby</person> of
+<place>London</place> merchant for the summe of <quantity>one hundred thirty three pounds
+of currant money of England</quantity>.
+
+<person>Whittell</person> &amp;#91;SIGNATURE, RH SIDE&amp;#93;
+
+&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;
+
+The <date>15th of March 1655</date>.
+
+<person>Baucock</person> against <person>harris</person> and <person>Chambers</person>&amp;#125;
+
+Examined upon an allegation given
+on the behalf of the said <person>Baucok</person> the
+<date>7th instant</date>.
+
+'''Rp. .1.'''
+
+<person>William Peters</person> of <place>Blackwall</place> in the County
+of <place>Middlesex</place> <occupation>Mariner</occupation> aged <quantity>25 yeares</quantity> or thereabouts.
+Sworn and examined.
+
+To the first article he saith and deposeth that he well
+knoweth the arlate <person>John harris</person> and saith that he the said harris
+together with <person>Laurence Chambers</person> arlate were the time arlate
+freighters or Imployers of the shipp the <ship>''little George''</ship> and for such
+commonly accounted, which he being then servant to <person>Christofer
+Mitchell</person> her master, And otherwise he cannot depose.
+
+To the second article he saith and deposeth that within the said time
+namely in or about <date>January or ffebruary 1647</date> the arlate <person>John harris</person>
+did hire and agree with the said <person>Christofer Mitchell</person> to goe and serve as
+master of and in the said shipp the <ship>''little George''</ship> for a voyage with
+her to be made from this port of <place>London</place> to several places beyond the
+Seas as <place>Barbadas</place>, <place>Antega</place>, the coast of <place>Barbary</place> and coast of
+<place>Spaine</place>, and back again for this Port of <place>London</place>, and saith that
+the said <person>Mitchell</person> well deserved <quantity>five pounds per month</quantity> for his
+service as master in the said shipp the said voyage, and so much
+he had in a former voyage as being a common rate, and further
+saith that the arlate <person>Laurence Chambers</person> was commonly reputed
+partner of and with the said harris in the said employment. And
+otherwise he cannot depose.
+
+To the third and 4th articles he saith and deposeth that the said <person>Christofer
+Mitchell</person> the said voyage within the time allegate had two servants
+and apprentices namely this deponent and the arlate <person>Christofer
+&amp;#91;XXX GUTTER&amp;#93;
+
+'''see the 2d in A3./.'''
+
+&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;
+
+The <date>18th of March 1655</date>/ &amp;#91;CENTRE HEADING&amp;#93;
+
+<person>Wright</person> and Company against <person>Lenthall</person> and <person>Nutt</person>&amp;#125;
+<person>Suckley Budd</person>&amp;#125;
+
+Examined on an allegation given in and admitted on the
+behalf of <person>ffrancis Lenthall</person> the younger and <person>George Nutt</person>/
+
+'''Rp A'''
+
+<person>Samuell Whitby</person> of the City of <place>London</place> <occupation>Merchant</occupation>
+aged <quantity>20 years</quantity> or thereabouts a witness sworn and
+examined saith and deposeth as followeth videlicet./
+
+To first article of the said allegation he saith that he this deponent being then at
+<place>Mallaga</place> and employed by the arlate <person>Robert Whitby</person> there as an Agent for him
+in his Merchandizing affairs thereby well knoweth that the said <person>Robert Whitby</person>
+did on the behalf of the arlate <person>ffrancis Lenthall</person> and <person>George Nutt</person> (upon the arrival of
+the arlate Shipp <ship>''ffreindship''</ship> near <place>Mallaga</place> or within a very short time after) procure
+license for the said shipp to come within command and into the place where shipps
+usually trade there, in times of peace, when no war or difference was betwixt <place>Spaine</place>
+and <place>England</place>, And he this deponent did come aboard the said shipp <ship>''ffreindship''</ship>
+and acquainted the arlate <person>Barnabe houldeing</person> the Master of her that the said
+<person>Robert Whitby</person> had procured such a license, and told him that he might safely
+bring his said shipp as near shore there as he pleased for the more
+convenient receiving of such wines as were to be laden aboard him or to that effect The premises
+he deposeth for the reasons aforesaid And further to this article he cannot depose/
+
+To the second article he saith that of his this deponents sight and knowledge several English
+shipps did come within command and lay nearer the shore at <place>Mallaga</place> by about
+the space of a mile and a half than the <ship>''ffreindshipp''</ship> did, and traded there freely having
+(as he this deponent hath heard) procured pratique or license so to do, amongst
+which there was a shipp laden with fish which (as he hath heard) was consigned to the arlate
+Mr <person>Edward Bennett</person> And further to this article he cannot depose/
+
+To the 6th article he saith, he knoweth that about <time>two years</time> since the foresaid <person>Robert
+Whitby</person> having delivered a parcel of wines at the place arlate unto one <person>Thomas Raven</person> Master of
+a shipp called the <ship>''Thomas and John''</ship> of <place>Yarmouth</place>, to be shipped on board his said shipp
+and the said Master and Company taking the same and rafting or causing it to be
+rafted with intent to bring the same aboard his said shipp, one butt of wine
+of the said parcel broke off from the raft and was lost in the sea for <time>thirteen or
+14 days</time> space, and then found again by certain Fishermen, who had by order of the
+then Governor at <place>Mallaga</place> <quantity>two hundred and odd Ryalls</quantity> allowed them for their
+pains in finding the same, and this deponent well knoweth that the said <person>Thomas
+Raven</person> did by a writing under his hand, oblige himself to the said <person>Robert Whitby</person>
+to pay the said <quantity>two hundred and odd Ryalls</quantity> for (so paid, to the said Fishermen
+by the said <person>Robert Whitby</person> for finding the same) in <place>London</place> to the Merchant for whose
+Account the said butt of wine was laden, which he this deponent believeth
+the said Master would not have done, had he not known it to be the Custom
+that after wines are delivered at the &amp;#91;?ploy&amp;#93; into possession of the Master of a
+shipp or his Company he and they stand chargeable with them till they be
+delivered at the Port of their discharge And further to this article he cannot
+depose./
+
+To the 9th article he saith that he this deponent having heard by some Mariners
+of other English shipps lying near <place>Mallaga</place> that certain wines which were
+rafted by the <ship>''ffreindshipps''</ship> company were lost did go on board the <ship>''freinshipp''</ship> (sic)
+to know the truth thereof and was by divers of the said shipps company
+informed that the raft of wines which they had rafted for
+received of the said <person>Robert Whitby</person> for Account of the arlate <person>ffrancis Lenthall</person>
+and <person>George Nutt</person>, was brought safe to their said shipps side (though they had
+broke loose (as they said) once or twice by the way) and that after they had taken
+up one butt of the said wine and had the same within the tack of the said
+shipp the remainder of the said raft of wine (being <quantity>twenty nine butts</quantity>) were
+sunk in the sea by the said shipps side And further to this article he cannot depose/
+
+To the rest of the articles he is not examined by direction of the producents/
+
+Repeated before doctor <person>Godolphin</person>
+
+<person>Samuell Whitby</person> &amp;#91;SIGNATURE, RH SIDE&amp;#93;
+
+}}</text>
+      <sha1>2nzqmuxf9845kofu92rigylvg4fyx68</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>HCA 13/71 f.120r Annotate</title>
+    <ns>0</ns>
+    <id>5385</id>
+    <revision>
+      <id>85586</id>
+      <parentid>85505</parentid>
+      <timestamp>2015-05-20T15:22:13Z</timestamp>
+      <contributor>
+        <username>ColinGreenstreet</username>
+        <id>2</id>
+      </contributor>
+      <minor/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="3177">{{PageMetaData
+|Parent volume=HCA 13/71
+|Folio=120
+|Side=Recto
+|Status=Uploaded image; transcribed on 30/08/2012
+|First transcriber=<person>Colin Greenstreet</person>
+|First transcribed=<date>2012/08/30</date>
+|Editorial history=Edited on <date>14/04/2014</date> by <person>Colin Greenstreet</person>
+|Note=IMAGE: P1130410.JPG
+}}
+{{PageHelp}}
+{{PageTranscription
+|Transcription image={{#transcription-image: P1130410.JPG}}
+|Transcription=The same day
+
+Examined upon the said allegation/
+
+'''Rp.'''
+
+'''2us'''
+
+<person>Edward Ward</person> of <place>London</place> <occupation>Marchant</occupation> aged <quantity>39 years</quantity> or thereabouts
+a witness sworn and examined saith and deposeth as followeth videlicet./
+
+To the first second third 4th and 5th articles he cannot depose./
+
+To the 6th article he saith that he this deponent hath used the trade of Merchandizing
+for these <quantity>twenty years</quantity> last past, and for <quantity>fifteen years</quantity> of the said time lived
+in <place>Mall&amp;#91;?e&amp;#93;ga</place>, and thereby well observed that it is the usual custom there betwixt
+Merchants or their factors and Masters of shipps that when a parcel
+of wines is ready and brought to the Ploy by order of the factors, the Master
+or Purser of the shipp who is to carry the said wines doth there see the said wines
+marks, and doth take charge of them
+and cause his Company to raft them and then
+make them fast to his shipps boat, and the same being once so rafted, and on
+float, this deponent saith that by the said Custom the Master of the shipp
+who is to lade them and his company and Owners of the shipp stand chargeable with them until they
+come to the Port of their discharge and if any miscarry and are lost in the
+Sea between the Ploy and the shipp and come not safe on board, the Master
+Mariners and Owners of the said shipp are liable to make good whatever
+damage happens by reason of rafting the said wines, And this he
+this deponent hath observed to be the Custom at <place>Mall&amp;#91;?e&amp;#93;ga</place> betwixt Masters
+Merchants and Masters of shipps touching rafting of wines during all the
+time aforesaid which he this deponent lives in <place>Mallaga</place>. And further to
+this article he cannot depose/
+
+To the 7th 8th and 9th articles he cannot depose/
+
+To the 10th he saith as before that wines are rafted and on float from
+the Ploy at <place>Mall&amp;#91;?e&amp;#93;ga</place>, the Master and Company and Owners of the shipp that is
+to lade them run the Risk and hazard of them until such time as they are
+safely laden aboard the said shipp And this he this deponent hath observed
+to be the custom there at <place>Mallaga</place> during the <quantity>fifteen years</quantity> he so lived
+there, And further to this article he cannot depose/
+
+To the 11th and 12th articles he cannot depose
+
+To the last he saith his foregoing deposition is true./
+
+Repeated before doctor <person>Godolphin</person>./
+
+<person>Edward Ward</person> &amp;#91;SIGNATURE, RH SIDE&amp;#93;
+
+&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;
+
+The same day/
+
+Examined on the said allegation/
+
+'''Rp EA'''
+
+'''3'''
+
+<person>Thomas Smith</person> of <place>London</place> <occupation>Merchant</occupation> aged <quantity>twenty
+two years</quantity> or thereabouts a witness sworn and
+examined saith and deposeth as followeth videlicet/
+
+To the first and second articles of the said allegation he saith that
+he
+
+<sha1>cfoht34i1d4y5abu2a7il9eulc4c008</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>HCA 13/71 f.120v Annotate</title>
+    <ns>0</ns>
+    <id>5617</id>
+    <revision>
+      <id>86196</id>
+      <parentid>86195</parentid>
+      <timestamp>2015-05-21T18:46:34Z</timestamp>
+      <contributor>
+        <username>ColinGreenstreet</username>
+        <id>2</id>
+      </contributor>
+      <minor/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="3405">{{PageMetaData
+|Parent volume=HCA 13/71
+|Folio=120
+|Side=Verso
+|Status=Uploaded image; transcribed on 05/09/2012
+|First transcriber=<person>Colin Greenstreet</person>
+|First transcribed=<date>2012/09/05</date>
+|Editorial history=Edited on <date>14/04/2014</date> by <person>Colin Greenstreet</person>
+|Note=IMAGE: P1130411.JPG
+}}
+{{PageHelp}}
+{{PageTranscription
+|Transcription image={{#transcription-image: P1130411.JPG}}
+|Transcription=he well knoweth that an English shipp laden with <commodity>newfound
+land fish</commodity> and consigned to the arlate <person>Mr Bennett</person> (the shipps name he knoweth
+not) and also another English shipp called
+the <ship>''Pilgrim''</ship> laden also with <commodity>fish</commodity> and consigned to one <person>Mr Thomas Bande</person> an English
+Merchant and other English shipps did at the time the arlate Shipp the <ship>''ffreindshipp''</ship>
+lay in the Road of <place>Mallaga</place> the voyage in question come under Command
+there, and lay there as near as usually English shipps used to ride in times
+of peace betwixt <place>England</place> and <place>Spaine</place>, and did of this deponents sight and knowledge
+enjoy freedom of trade there, their factors or freighters having &amp;#91;?procured&amp;#93;
+of the Governor and other officers of the King of <place>Spaine</place> at <place>Mall&amp;#91;?e&amp;#93;ga</place>
+pratique or license for their so doing, And he this deponent well remembereth the said
+shipp <ship>''Pilgrim''</ship> while she so lay in the Road of <place>Mallega</place> under Command
+and after she had discharged a great part of her lading of <commodity>fish</commodity> there and
+had taken in some <commodity>wines</commodity>, was there seized by a <nationality>Spanish</nationality> man of war which
+came into the said Road, and the <nationality>English</nationality> men on board her turned out of her, And
+he saith he well remembereth that complaint being thereof made to the
+Governor of <place>Mallega</place> and it
+being made appear to the Governor that she had pratique or license to
+trade here, the Governor came down in person the next day after her
+being so taken and discharged all the <nationality>English</nationality> men of such restraints as they were under and put them into
+quiet possession of their said shipp the <ship>''Pilgrim''</ship> again, and turned the <nationality>Spaniards</nationality>
+out of the same, and permitted her to continue there quietly and take
+in the rest of her lading of <commodity>wines</commodity> which she was there to receive on board
+This he deposeth being then an <nationality>English</nationality> factor at <place>Mallega</place> and being
+an eye witness thereof And further he cannot of his knowledge depose
+but hath heard that the arlate <person>Whitby</person> did procure pratique in the like
+kind for the shipp <ship>''ffreindshipp''</ship>./
+
+To the 3 he cannot depose saving he saith he knoweth the shipp <ship>ffreindshipp</ship>
+arlate and the arlate <person>Barnaby holding</person> her Master, and saith the voyage in question
+she lay in the Road of <place>Mallega</place> <quantity>two or three miles</quantity> from shore to take
+in her lading there./
+
+To the 4th and 5th he cannot depose/
+
+To the 6th he saith that at <place>Mallega</place> aforesaid it is commonly accounted
+to be the use and Custom that when a parcel of <commodity>wines</commodity> is delivered at
+the Ploy there into the possession of the Master of any shipp or any of his
+company; the said Master and his Company and owners of his shipp are
+chargeable with the said <commodity>wines</commodity> till the delivery of them at their port of
+discharge, and if they the said master and company raft the said <commodity>wines</commodity> off
+from shore towards their shipp he and his Company or Owners are to
+make good to the parties for whose Account the said
+wines are delivered to them, all damage which happens by rafting the said
+wines and to make them good if any of them be thereby lost in the sea and &amp;#91;?come ?not GUTTER&amp;#93;
+safe
+
+Repeated before doctor <person>Godolphin</person>./
+
+<person>Edward Ward</person> &amp;#91;SIGNATURE, RH SIDE&amp;#93;
+
+&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;
+
+The same day/
+
+Examined on the said allegation/
+
+'''Rp EA'''
+
+'''3'''
+
+<person>Thomas Smith</person> of <place>London</place> <occupation>Merchant</occupation> aged <quantity>twenty
+two years</quantity> or thereabouts a witness sworn and
+examined saith and deposeth as followeth videlicet/
+
+To the first and second articles of the said allegation he saith that
+he well knoweth that an English shipp laden with <commodity>newfound land fish</commodity> and consigned to the arlate <person>Mr Bennett</person> (the shipps name he knoweth
+not) and also another English shipp called the <ship>''Pilgrim''</ship> laden also with <commodity>fish</commodity> and consigned to one <person>Mr Thomas Bande</person> an English
+Merchant and other English shipps did at the time the arlate Shipp the <ship>''ffreindshipp''</ship>
+lay in the Road of <place>Mallaga</place> the voyage in question come under Command
+there, and lay there as near as usually English shipps used to ride in times
+of peace betwixt <place>England</place> and <place>Spaine</place>, and did of this deponents sight and knowledge
+enjoy freedom of trade there, their factors or freighters having &amp;#91;?procured&amp;#93;
+of the Governor and other officers of the King of <place>Spaine</place> at <place>Mall&amp;#91;?e&amp;#93;ga</place> pratique or license for their so doing, And he this deponent well remembereth the said
+shipp <ship>''Pilgrim''</ship> while she so lay in the Road of <place>Mallega</place> under Command
+and after she had discharged a great part of her lading of <commodity>fish</commodity> there and
+had taken in some <commodity>wines</commodity>, was there seized by a <nationality>Spanish</nationality> man of war which
+came into the said Road, and the <nationality>English</nationality> men on board her turned out of her, And
+he saith he well remembereth that complaint being thereof made to the
+Governor of <place>Mallega</place> and it
+being made appear to the Governor that she had pratique or license to
+trade here, the Governor came down in person the next day after her
+being so taken and discharged all the <nationality>English</nationality> men of such restraints as they were under and put them into
+quiet possession of their said shipp the <ship>''Pilgrim''</ship> again, and turned the <nationality>Spaniards</nationality>
+out of the same, and permitted her to continue there quietly and take
+in the rest of her lading of <commodity>wines</commodity> which she was there to receive on board
+This he deposeth being then an <nationality>English</nationality> factor at <place>Mallega</place> and being
+an eye witness thereof And further he cannot of his knowledge depose
+but hath heard that the arlate <person>Whitby</person> did procure pratique in the like
+kind for the shipp <ship>''ffreindshipp''</ship>./
+
+To the 3 he cannot depose saving he saith he knoweth the shipp <ship>ffreindshipp</ship>
+arlate and the arlate <person>Barnaby holding</person> her Master, and saith the voyage in question
+she lay in the Road of <place>Mallega</place> <quantity>two or three miles</quantity> from shore to take
+in her lading there./
+
+To the 4th and 5th he cannot depose/
+
+To the 6th he saith that at <place>Mallega</place> aforesaid it is commonly accounted
+to be the use and Custom that when a parcel of <commodity>wines</commodity> is delivered at
+the Ploy there into the possession of the Master of any shipp or any of his
+company; the said Master and his Company and owners of his shipp are
+chargeable with the said <commodity>wines</commodity> till the delivery of them at their port of
+discharge, and if they the said master and company raft the said <commodity>wines</commodity> off
+from shore towards their shipp he and his Company or Owners are to
+make good to the parties for whose Account the said
+wines are delivered to them, all damage which happens by rafting the said
+wines and to make them good if any of them be thereby lost in the sea and &amp;#91;?come ?not GUTTER&amp;#93;
+safe to
+their shipp, And this he this deponent hath observed
+to be the Custom there at <place>Mallaga</place> during the <quantity>fifteen years</quantity> he so lived
+there, And further to this article he cannot depose/
+
+To the 11th and 12th articles he cannot depose
+
+To the last he saith his foregoing deposition is true./
+
+Repeated before doctor <person>Godolphin</person>./
+
+<person>Edward Ward</person> &amp;#91;SIGNATURE, RH SIDE&amp;#93;
+
+&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;
+
+The same day/
+
+Examined on the said allegation/
+
+'''Rp EA'''
+
+'''3'''
+
+<person>Thomas Smith</person> of <place>London</place> <occupation>Merchant</occupation> aged <quantity>twenty two years</quantity> or thereabouts a witness sworn and examined saith and deposeth as followeth videlicet/
+
+To the first and second articles of the said allegation he saith that
+he well knoweth that an English shipp laden with <commodity>newfound land fish</commodity> and consigned to the arlate <person>Mr Bennett</person> (the shipps name he knoweth
+not) and also another English shipp called the <ship>''Pilgrim''</ship> laden also with <commodity>fish</commodity> and consigned to one <person>Mr Thomas Bande</person> an English
+Merchant and other English shipps did at the time the arlate Shipp the <ship>''ffreindshipp''</ship>
+lay in the Road of <place>Mallaga</place> the voyage in question come under Command
+there, and lay there as near as usually English shipps used to ride in times
+of peace betwixt <place>England</place> and <place>Spaine</place>, and did of this deponents sight and knowledge
+enjoy freedom of trade there, their factors or freighters having &amp;#91;?procured&amp;#93;
+of the Governor and other officers of the King of <place>Spaine</place> at <place>Mall&amp;#91;?e&amp;#93;ga</place> pratique or license for their so doing, And he this deponent well remembereth the said
+shipp <ship>''Pilgrim''</ship> while she so lay in the Road of <place>Mallega</place> under Command
+and after she had discharged a great part of her lading of <commodity>fish</commodity> there and
+had taken in some <commodity>wines</commodity>, was there seized by a <nationality>Spanish</nationality> man of war which
+came into the said Road, and the <nationality>English</nationality> men on board her turned out of her, And
+he saith he well remembereth that complaint being thereof made to the
+Governor of <place>Mallega</place> and it
+being made appear to the Governor that she had pratique or license to
+trade here, the Governor came down in person the next day after her
+being so taken and discharged all the <nationality>English</nationality> men of such restraints as they were under and put them into
+quiet possession of their said shipp the <ship>''Pilgrim''</ship> again, and turned the <nationality>Spaniards</nationality>
+out of the same, and permitted her to continue there quietly and take
+in the rest of her lading of <commodity>wines</commodity> which she was there to receive on board
+This he deposeth being then an <nationality>English</nationality> factor at <place>Mallega</place> and being
+an eye witness thereof And further he cannot of his knowledge depose
+but hath heard that the arlate <person>Whitby</person> did procure pratique in the like
+kind for the shipp <ship>''ffreindshipp''</ship>./
+
+To the 3 he cannot depose saving he saith he knoweth the shipp <ship>ffreindshipp</ship>
+arlate and the arlate <person>Barnaby holding</person> her Master, and saith the voyage in question
+she lay in the Road of <place>Mallega</place> <quantity>two or three miles</quantity> from shore to take
+in her lading there./
+
+To the 4th and 5th he cannot depose/
+
+To the 6th he saith that at <place>Mallega</place> aforesaid it is commonly accounted
+to be the use and Custom that when a parcel of <commodity>wines</commodity> is delivered at
+the Ploy there into the possession of the Master of any shipp or any of his
+company; the said Master and his Company and owners of his shipp are
+chargeable with the said <commodity>wines</commodity> till the delivery of them at their port of
+discharge, and if they the said master and company raft the said <commodity>wines</commodity> off
+from shore towards their shipp he and his Company or Owners are to
+make good to the parties for whose Account the said
+wines are delivered to them, all damage which happens by rafting the said
+wines and to make them good if any of them be thereby lost in the sea and &amp;#91;?come ?not GUTTER&amp;#93;
+safe to their shipp, And this he this deponent hath observed
+to be the Custom there at <place>Mallaga</place> during the <quantity>fifteen years</quantity> he so lived
+there, And further to this article he cannot depose/
+
+To the 11th and 12th articles he cannot depose
+
+To the last he saith his foregoing deposition is true./
+
+Repeated before doctor <person>Godolphin</person>./
+
+<person>Thomas Smith</person> &amp;#91;SIGNATURE, RH SIDE&amp;#93;
+
+}}</text>
+      <sha1>jxwon09gqrwn0memzasbcqn4ymfs4ia</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Template:PageHelp</title>
+    <ns>10</ns>
+    <id>26</id>
+    <revision>
+      <id>75563</id>
+      <parentid>40030</parentid>
+      <timestamp>2015-04-12T18:30:29Z</timestamp>
+      <contributor>
+        <username>Rowan</username>
+        <id>1</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="3217">&lt;div class=&quot;page_help toccolours mw-collapsible mw-collapsed&quot;&gt;
+Expand this area to see details of page purpose, how to register, how to add footnotes, and useful links.
+&lt;div class=&quot;mw-collapsible-content&quot;&gt;
+
+
+----
+
+
+&lt;big&gt;'''Purpose'''&lt;/big&gt;
+
+This page is for the annotation of {{#show: {{FULLPAGENAME}} | ?Parent volume}} f.{{#show: {{FULLPAGENAME}} | ?Folio}}{{#ifeq: {{#show: {{FULLPAGENAME}} | ?Side}} |Verso|v|r}}.
+
+Annotations can be viewed by everyone on a read-only basis.
+
+For more information on MarineLives and the MarineLives Annotation Project read our Shipping News blog entries:
+
+[http://marinelives-theshippingnews.org/blog/2013/05/01/annotating-marine-lives/ Annotating Marine Lives, May 1st 2013]
+[http://marinelives-theshippingnews.org/blog/2013/05/07/adding-value-to-primary-records/ Adding value to primary documents, May 8th 2013]
+[http://marinelives-theshippingnews.org/blog/2013/05/09/witnesses-in-court-1657-1658/ Witnesses in Court, 1657-1658 (May 9th, 2013)]
+
+
+----
+
+
+&lt;big&gt;'''Registration to annotate documents'''&lt;/big&gt;
+
+Registration is required to contribute annotations to this page and to other pages in the wiki.
+
+You can register using the following [http://marinelives.org/contact-us.html|Contact Form], and we will issue you with a UserName and Password for the wiki.
+
+
+----
+
+
+&lt;big&gt;'''Text formatting'''&lt;/big&gt;
+
+The MarineLives transcription platform is built on MediaWiki, which uses wiki markup to format text.  For a guide showing how to produce italics, bold, escaped text and headings, see the [http://www.mediawiki.org/wiki/Help:Formatting MediaWiki page on formatting]; there are also guides for [http://www.mediawiki.org/wiki/Help:Links internal and external links], [http://www.mediawiki.org/wiki/Help:Images image embedding], [http://www.mediawiki.org/wiki/Help:Tables tables], and [http://www.mediawiki
