@@ -1,0 +1,21 @@
+# Function to find and print structure around a specific folio for better understanding
+def find_folio_structure(file_path, folio_number):
+    tree = ET.parse(file_path)
+    root = tree.getroot()
+    folio_structure = []
+
+    for elem in root.iter():
+        if folio_number in (elem.text or ''):
+            folio_structure.append((elem.tag, elem.attrib, elem.text.strip() if elem.text else ''))
+            # Capture the structure around the specific folio
+            parent = elem
+            while parent is not None:
+                folio_structure.append((parent.tag, parent.attrib, parent.text.strip() if parent.text else ''))
+                parent = parent.find("..")
+            break
+
+    return folio_structure
+
+# Inspect the structure around folio f.101r
+folio_structure = find_folio_structure(file_path, 'f.101r')
+folio_structure
