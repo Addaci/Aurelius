@@ -1,0 +1,13 @@
+# Let's print the structure of the XML file to identify relevant tags and content around the specified folio.
+
+tree = ET.parse(file_path)
+root = tree.getroot()
+
+# Print the structure and some elements around the target folio
+elements = []
+
+for elem in root.iter():
+    elements.append((elem.tag, elem.attrib, elem.text.strip() if elem.text else ''))
+
+# Display a subset of the elements for inspection
+elements[:50]
